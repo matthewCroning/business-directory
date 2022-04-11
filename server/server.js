@@ -5,11 +5,13 @@ mongoose      = require("mongoose"),
 http = require('http').Server(app);
 
 const businessRoutes = require("./routes/business");
+const authRoutes = require("./routes/auth");
 
 const PORT = process.env.PORT || '3001';
 
 app.use(bodyParser.json());
 app.use("/api/business", businessRoutes)
+app.use("/api/auth", authRoutes)
 app.listen(PORT, function(){
 });
 

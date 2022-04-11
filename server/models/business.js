@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const businessSchema = new Schema({
   name: {type: String, lowercase: true},
   displayImage: {type: String},  
+  description: {type: String},
   location:{
       number: {type: String},
       street: {type: String},
